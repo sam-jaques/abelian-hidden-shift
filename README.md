@@ -23,7 +23,8 @@ from kuperberg import HiddenShiftProblem
 from kuperberg import PhaseState
 ```
 
-###Full Simulation
+### Full Simulation
+
 First, instantiate a hidden shift problem:
 ```
 test_problem=HiddenShiftProblem(group_order,[phi_1,phi_2,phi_3],secret_shift)
@@ -38,7 +39,8 @@ low_height_state=test_problem.sample_of_height(2)
 This samples states and collimates them until it reaches the input height (in this case, 2).
 It outputs a phase state, as an object of the class PhaseState.
 
-###States
+### States
+
 The PhaseState class represents individual states.
 
 One can print out the main features of the state:
@@ -59,7 +61,7 @@ balanced_state.measure()
 ```
 which returns 1 or 0.
 
-###Collimating
+### Collimating
 
 The other main function is 
 ```
