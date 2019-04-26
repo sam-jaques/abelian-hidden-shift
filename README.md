@@ -37,11 +37,11 @@ To run the full recursive algorithm, call:
 low_height_state=test_problem.sample_of_height(2)
 ```
 This samples states and collimates them until it reaches the input height (in this case, 2).
-It outputs a phase state, as an object of the class PhaseState.
+It outputs a phase state, as an object of the class `PhaseState`.
 
 ### States
 
-The PhaseState class represents individual states.
+The `PhaseState` class represents individual states.
 
 One can print out the main features of the state:
 ```
@@ -67,8 +67,8 @@ The other main function is
 ```
 collimate(phase_state_array,M)
 ```
-which performs the collimation subroutine. Here the phase_state_array is an array of PhaseState objects,
-from the same HiddenShiftProblem. It can be array of size 1. 
+which performs the collimation subroutine. Here the phase_state_array is an array of `PhaseState` objects,
+from the same `HiddenShiftProblem`. It can be array of size 1. 
 
 The M is slightly different than what Kuperberg defines m to be. In his paper, collimation reduces 
 a state of "height" 2^h to 2^m. This routine reduces a state of height h to h/M. Hence, M must 
@@ -84,7 +84,8 @@ To change this parameterization, you need to provide three things:
  * an array of height targets to recursively hit
  * a dictionary that maps height targets to the value of M to use at that height
  * a dictionary that maps height targets to length targets
-These should be constructed in the `build_params` method of HiddenShiftProblem. 
+
+These should be constructed in the `build_params` method of `HiddenShiftProblem`. 
 
 Please let me know if you improve this.
 
